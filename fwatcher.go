@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   M, err := filemonitor.NewMonitor("./tmp")
+   M, err := filemonitor.NewMonitor("./tmp", "")
    if err != nil {
       log.Println(err)
       return
