@@ -6,7 +6,8 @@ import (
 )
 
 type monitor struct {
-   Dir   string
+   Dir   string      // 監控目錄
+   Ext   string      // 附檔名
    FileWatcher *fsnotify.Watcher
 }
 
@@ -36,11 +37,11 @@ func(m *monitor) Do() {
 }
 
 // Initial
-func NewMonitor(dir string) (*monitor, error) {
+func NewMonitor(dir, ext string) (*monitor, error) {
    Mon, err := fsnotify.NewWatcher()
    return &monitor {
       Dir:  dir,
+      Ext:  ext,
       FileWatcher: Mon,
    }, err
 }
-
