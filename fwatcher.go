@@ -1,17 +1,19 @@
 package main
 
 import (
-   "log"
+
+   log "github.com/sirupsen/logrus"
    "github.com/asccclass/filewatch/libs/filemonitor"
 )
 
 func main() {
-   M, err := filemonitor.NewMonitor("./tmp", "")
+   nightswatch, err := filemonitor.NewMonitor("./tmp", "")
    if err != nil {
       log.Println(err)
       return
    }
-   M.Do()
-   M.FileWatcher.Watch("./filepool")
+   log.Println("Night gathers, and now my watch begins,It shall not end until my death....")
+   nightswatch.Do()
+   nightswatch.FileWatcher.Watch("./filepool")
    select {}
 }
