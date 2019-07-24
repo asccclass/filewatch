@@ -1,0 +1,6 @@
+DBSERVER=MySQLx
+DBNAME=bots
+DBLOGIN=root
+DBPASSWORD=webteam@2019
+
+DocumentRoot=www
