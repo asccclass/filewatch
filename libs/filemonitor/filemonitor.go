@@ -16,7 +16,7 @@ func(m *monitor) Do() {
       for {
          select {
          case w := <-m.FileWatcher.Event:
-            if w.IsCreate() {
+            if w.IsCreate() { // 上傳
                log.Println("新增文件", w.Name)
                continue
             } else if w.IsModify() {
