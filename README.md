@@ -15,9 +15,8 @@ https://github.com/howeyc/fsnotify
 ### 升級函數
 
 ```
-// 列出所有可更新的函數
-go list -m -u all
-
-// 更新所有函數
-go get -u ./...
+檢查： go list -m -u all
+升級： go get <套件名稱>@latest (針對您需要的套件)
+清理： go mod tidy
+測試： go test ./... (確保升級沒把程式弄壞)
 ```
