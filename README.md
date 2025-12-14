@@ -11,3 +11,13 @@ go mod download  // 取得函式
 ```
 https://github.com/howeyc/fsnotify
 ```
+
+### 升級函數
+
+```
+// 列出所有可更新的函數
+go list -m -u all
+
+// 更新所有函數
+go get -u ./...
+```
