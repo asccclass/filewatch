@@ -48,3 +48,5 @@ log:
 	 docker logs -f -t --tail 20 ${ContainerName}
 rm:
 	docker rm ${ContainerName}
+s:
+	git push -u origin master
